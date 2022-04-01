@@ -19,7 +19,7 @@ def calcular_area_do_triangulo(largura, comprimento):
 
 def contagem_progressiva(fim):
     for numero in range(fim): # repetir o bloco de zero até o fim
-        print(numero)         # exebir o número
+        print(numero)         # exibir o número
 
 def apoiar_candidato(nome, vezes):
     for numero in range(vezes):
@@ -41,6 +41,56 @@ def brincar_de_plim(fim):
             print('PLIM')
         else:
             print('{:0>9}'.format(numero))
+
+
+def exibir_dia_da_semana_if(numero):
+    print("Execução com IF")
+    if numero == 1:
+        print('O dia é segunda')
+    elif numero == 2:
+        print('O dia é terça')
+    elif numero == 3:
+        print('O dia é quarta')
+    elif numero == 4:
+        print('O dia é quinta')
+    elif numero == 5:
+        print('O dia é sexta')
+    elif numero == 6:
+        print('O dia é sábado')
+    elif numero == 7:
+        print('O dia é domingo')
+    else:
+        print('Número de dia inválido. Digite um número de 1 a 7')
+
+
+def exibir_dia_da_semana_match(numero):
+    print("Execução com MATCH")
+    match numero:
+        case 1:
+            print('O dia é segunda')
+        case 2:
+            print('O dia é terça')
+        case 3:
+            print('O dia é quarta')
+        case 4:
+            print('O dia é quinta')
+        case 5:
+            print('O dia é sexta')
+        case 6:
+            print('O dia é sábado')
+        case 7:
+            print('O dia é domingo')
+        case 8:
+            print('Número de dia inválido. Digite um número de 1 a 7')
+
+
+def brincar_de_para_ou_continua():
+    resposta = 'C' # C aqui significa que continua
+
+    while resposta == 'C' or resposta == 'c':
+        resposta = input('Digite C para continuar ou outro caracter para parar')
+
+    print('Você decidiu para com a brincadeira')
 
 
 # estrutura de identificação / execução do script
@@ -67,3 +117,12 @@ if __name__ == '__main__':
 
     # brincar de plim
     brincar_de_plim(100)
+
+    # exemplo de dia da semana com if - elif - else
+    exibir_dia_da_semana_if(3)
+
+    # exemplo de dia da semana com match - case
+    exibir_dia_da_semana_match(3)
+
+    # exemplo com while para ou continua
+    brincar_de_para_ou_continua()
